@@ -49,7 +49,15 @@ router.post('/', (req, res) => {
     })
 })
 
+router.put('/:id', (req, res) => {
+    console.log('PUT - req.params', req.params);
 
+    pokemonData[req.params.id] = req.params
+    res.json({
+        status: 200, 
+        msg: 'this is the PUT route'
+    })
+})
 
 
 
